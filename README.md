@@ -12,7 +12,8 @@ Name
 
 To Do List
 
-	 Think of a better name
+	 Think of a better name\
+	 Change the logo?
 
 Post Types:
 
