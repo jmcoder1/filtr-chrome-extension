@@ -1,0 +1,53 @@
+html {
+    background-color: #36465D;
+    height: 295px;
+    width: 470px;
+}
+
+p.header {
+    width: 470px;
+    postion: fixed;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+p {
+    text-align: center;
+    font-family: cursive, "Garamond";/*change to a nice font if possible*/
+    color: whitesmoke
+}
+    
+.option {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    
+}
+
+.choice {
+    height: 115px;
+    width: 120px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#options {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    top: 0;
+    bottom: 50px;
+    text-align: center;
+}
+
+#choices {
+    background-color: whitesmoke;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    padding: 3px;
+    
+}
