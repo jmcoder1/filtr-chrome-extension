@@ -14,6 +14,7 @@ To Do List
 
 	 Think of a better name\
 	 Change the logo?
+	 change and resize the post icons so they are centered and look inline
 
 Post Types:
 
