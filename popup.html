@@ -2,6 +2,7 @@
 <html>
     <head>
     <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="popup.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -14,29 +15,25 @@
         <input type="button" class="choice">    
         <input type="button" class="choice">    
     </div>
-        
-    <div id="options">
-        <input type="button" class="option">
-        <input type="button" class="option">
-        <input type="button" class="option">
-        <input type="button" class="option">
-
-    </div>
-        
-
-        
-    <div id="arrow_keys">
-        <input type="button" class="arrow_key" id="left_arrow">
-        <input type="button" class="arrow_key" id="right_arrow">
-    </div>
-        
-    <div id="status"></div>
-        
-    <button class="btn" id="save">Save</button>
-    <button class="btn" id="lock">Lock</button>
     
+        <div id="status"><p>Status Bar</p></div>
+    
+     <div id="options">
+        <input type="button" class="arrow_key unclicked_left" id="left_arrow">
+        <input type="button" class="option unclicked_text" id="text">
+        <input type="button" class="option unclicked_image" id="image">
+        <input type="button" class="option unclicked_quote" id="quote">
+        <input type="button" class="option unclicked_link" id="link">
+        <input type="button" class="arrow_key unclicked_right" id="right_arrow">
+
+    </div>
+        
+    <div class="usr_btn">
+        <button class="btn" id="save">Save</button>
+    </div> 
+        
     <!--Add an icon for account creation in the top right.-->
-    <div class="footer">Inforamtion the app and credits.</div>
+        <p class="footer">Inforamtion the app and credits.</p>
     </body>
 </html>
 
