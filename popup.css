@@ -79,11 +79,22 @@ p {
 #left_arrow {
     float: left;
     margin-left: 20px;
+    background-image: url(arrows/unclicked/left.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+    border: none;
+    outline: 0; 
 }
+
 
 #right_arrow {
     float: right;
     margin-right: 20px;
+    background-image: url(arrows/unclicked/right.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+    border: none;
+    outline: 0;    
 }
 
 .usr_btn {
@@ -99,25 +110,25 @@ p {
     border-bottom-right-radius: 6px;
 }
 
-.unclicked_right {
-    background-image: url(arrows/unclicked/right.png);
-    background-color: whitesmoke;
-    background-size: 50px 50px;
-    border: none;
-    outline: 0;
-    
+#right_arrow:hover {
+    background-image: url(arrows/clicked/right.png);
 }
 
-.unclicked_left {
-    background-image: url(arrows/unclicked/left.png);
-    background-color: whitesmoke;
-    background-size: 50px 50px;
-    border: none;
-    outline: 0; 
+
+
+#left_arrow:hover {
+    background-image: url(arrows/clicked/left.png)
 }
 
 .unclicked_text {
     background-image: url(posts/unclicked_types/text.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_text:hover {
+    background-image: url(posts/hovered_types/text.png);
     background-color: whitesmoke;
     background-size: 50px 50px;
 
@@ -130,10 +141,24 @@ p {
 
 }
 
+.unclicked_image:hover {
+    background-image: url(posts/hovered_types/images.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
 .unclicked_quote {
     background-image: url(posts/unclicked_types/quotes.png);
     background-color: whitesmoke;
     background-size: 50px 50px;
+}
+
+.unclicked_quote:hover {
+    background-image: url(posts/hovered_types/quotes.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
 }
 
 .unclicked_link {
@@ -142,3 +167,62 @@ p {
     background-size: 50px 50px;
 }
 
+.unclicked_link:hover {
+    background-image: url(posts/hovered_types/links.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+.unclicked_chat {
+    background-image: url(posts/unclicked_types/chats.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_chat:hover {
+    background-image: url(posts/hovered_types/chats.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_audio {
+    background-image: url(posts/unclicked_types/audio.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_audio:hover {
+    background-image: url(posts/hovered_types/audio.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_video {
+    background-image: url(posts/unclicked_types/videos.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+}
+
+.unclicked_video:hover {
+    background-image: url(posts/hovered_types/videos.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_ask {
+    background-image: url(posts/unclicked_types/asks.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+}
+
+.unclicked_ask:hover {
+    background-image: url(posts/hovered_types/asks.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
