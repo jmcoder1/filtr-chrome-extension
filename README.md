@@ -14,7 +14,6 @@ To Do List
 
 	 Think of a better name\
 	 Change the logo?
-	 lighten the icons as opposed to making them darker - this is more recognisable for the audience (tumblr users)
 
 Post Types:
 
@@ -26,6 +25,8 @@ Post Types:
 	Audio
 	Video
 	Ask
+	
+Features
 
 * Allow users to check what type of posts they want in their dashboard. (opt in)
 
