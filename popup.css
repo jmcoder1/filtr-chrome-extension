@@ -14,40 +14,264 @@ p.header {
 
 }
 
+p.footer {
+    font-size: 10px;
+    float: left;
+}
+
 p {
     text-align: center;
     font-family: cursive, "Garamond";/*change to a nice font if possible*/
     color: whitesmoke
+}
+
+.status {
+    height: 10px;
 }
     
 .option {
     height: 50px;
     width: 50px;
     display: inline-block;
-    
+    border: none;
+    outline: 0;
 }
 
 .choice {
-    height: 115px;
+    height: 100px;
     width: 120px;
+    background-color: white;
     display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none; 
 }
 
 #options {
-    background-color: whitesmoke;
-    border-radius: 20px;
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     top: 0;
     bottom: 50px;
     text-align: center;
+    margin-top: 3px;
+    margin-bottom: 0.25px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    
 }
 
 #choices {
-    background-color: whitesmoke;
-    width: 100%;
+    background-color: white;
+    width: 450px;
+    height: 120px;
     border-radius: 8px;
     text-align: center;
     padding: 3px;
     
+}
+
+.arrow_key {
+    height: 50px;
+    width: 50px;
+}
+
+#left_arrow {
+    float: left;
+    margin-left: 20px;
+    background-image: url(arrows/unclicked/left.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+    border: none;
+    outline: 0; 
+}
+
+
+#right_arrow {
+    float: right;
+    margin-right: 20px;
+    background-image: url(arrows/unclicked/right.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+    border: none;
+    outline: 0;    
+}
+
+.usr_btn {
+    height: 30px;
+}
+
+
+#save {
+    width: 455px;
+    height: 30px;
+    text-align: center;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+#right_arrow:hover {
+    background-image: url(arrows/clicked/right.png);
+}
+
+
+
+#left_arrow:hover {
+    background-image: url(arrows/clicked/left.png)
+}
+
+.unclicked_text {
+    background-image: url(posts/unclicked_types/text.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_text:hover {
+    background-image: url(posts/hovered_types/text.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.locked_text {
+    background-image: url(posts/locked_types/text.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
+.unclicked_image {
+    background-image: url(posts/unclicked_types/images.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_image:hover {
+    background-image: url(posts/hovered_types/images.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.locked_image {
+    background-image: url(posts/locked_types/images.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
+.unclicked_quote {
+    background-image: url(posts/unclicked_types/quotes.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+}
+
+.locked_quote {
+    background-image: url(posts/locked_types/quotes.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
+.unclicked_quote:hover {
+    background-image: url(posts/hovered_types/quotes.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_link {
+    background-image: url(posts/unclicked_types/links.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+}
+
+.locked_link {
+    background-image: url(posts/locked_types/links.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
+.unclicked_link:hover {
+    background-image: url(posts/hovered_types/links.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+.unclicked_chat {
+    background-image: url(posts/unclicked_types/chats.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_chat:hover {
+    background-image: url(posts/hovered_types/chats.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.locked_chat {
+    background-image: url(posts/locked_types/chats.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
+.unclicked_audio {
+    background-image: url(posts/unclicked_types/audio.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.unclicked_audio:hover {
+    background-image: url(posts/hovered_types/audio.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.locked_audio {
+    background-image: url(posts/locked_types/audio.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+.unclicked_video {
+    background-image: url(posts/unclicked_types/videos.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+}
+
+.unclicked_video:hover {
+    background-image: url(posts/hovered_types/videos.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.locked_video {
+    background-image: url(posts/locked_types/videos.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
+.unclicked_ask {
+    background-image: url(posts/unclicked_types/asks.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+}
+
+.unclicked_ask:hover {
+    background-image: url(posts/hovered_types/asks.png);
+    background-color: whitesmoke;
+    background-size: 50px 50px;
+
+}
+
+.locked_ask {
+    background-image: url(posts/locked_types/asks.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
 }

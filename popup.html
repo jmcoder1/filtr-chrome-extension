@@ -2,6 +2,8 @@
 <html>
     <head>
     <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="jquery.min.js"></script>
+    <script src="popup.js"></script>
     </head>
 
     <body>
@@ -10,33 +12,29 @@
     <p>How to use the current popup box (prompt)</p>
         
     <div id="choices">
-        <input type="button" class="choice">
-        <input type="button" class="choice">    
-        <input type="button" class="choice">    
+        <input type="button" class="choice" id = "first_choice">
+        <input type="button" class="choice" id = "second_choice">    
+        <input type="button" class="choice" id = "third_choice">    
     </div>
-        
-    <div id="options">
-        <input type="button" class="option">
-        <input type="button" class="option">
-        <input type="button" class="option">
-        <input type="button" class="option">
-
-    </div>
-        
-
-        
-    <div id="arrow_keys">
-        <input type="button" class="arrow_key" id="left_arrow">
-        <input type="button" class="arrow_key" id="right_arrow">
-    </div>
-        
-    <div id="status"></div>
-        
-    <button class="btn" id="save">Save</button>
-    <button class="btn" id="lock">Lock</button>
     
+        <div id="status"><p id="status_text"></p></div>
+    
+     <div id="options">
+        <button class="arrow_key" id="left_arrow"></button>
+        <input type="button" class="option unclicked_text" id="first_option">
+        <input type="button" class="option unclicked_image" id="second_option">
+        <input type="button" class="option unclicked_quote" id="third_option">
+        <input type="button" class="option unclicked_link" id="fourth_option">
+        <button class="arrow_key" id="right_arrow"></button>
+
+    </div>
+        
+    <div class="usr_btn">
+        <button class="btn" id="save">Save</button>
+    </div> 
+        
     <!--Add an icon for account creation in the top right.-->
-    <div class="footer">Inforamtion the app and credits.</div>
+        <p class="footer">Inforamtion about the app and credits.</p>
     </body>
 </html>
 

@@ -9,11 +9,18 @@
 		"default_popup": "popup.html"
 	},
 
+
+	"icons": {
+		"128": "icons/filter_icon_extension.png"
+	},
+
 	"content_scripts":[
 	{
 		"matches": ["*://www.tumblr.com/*"],
 		"js": ["jquery-2.1.4.min.js"]
 	}
-	]
-	
+	],
+
+	"content_security_policy": "script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js; object-src 'self'"
+
 }

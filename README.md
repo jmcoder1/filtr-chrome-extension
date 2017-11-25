@@ -14,8 +14,7 @@ To Do List
 
 	 Think of a better name\
 	 Change the logo?
-	smooth out the choices so they look better
-	
+
 Post Types:
 
 	Text
@@ -26,6 +25,8 @@ Post Types:
 	Audio
 	Video
 	Ask
+	
+Features
 
 * Allow users to check what type of posts they want in their dashboard. (opt in)
 
