@@ -40,11 +40,13 @@ p {
 .choice {
     height: 100px;
     width: 120px;
+    background-color: white;
     display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: none; 
 }
 
 #options {
@@ -134,6 +136,12 @@ p {
 
 }
 
+.locked_text {
+    background-image: url(posts/locked_types/text.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
 .unclicked_image {
     background-image: url(posts/unclicked_types/images.png);
     background-color: whitesmoke;
@@ -148,10 +156,22 @@ p {
 
 }
 
+.locked_image {
+    background-image: url(posts/locked_types/images.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
 .unclicked_quote {
     background-image: url(posts/unclicked_types/quotes.png);
     background-color: whitesmoke;
     background-size: 50px 50px;
+}
+
+.locked_quote {
+    background-image: url(posts/locked_types/quotes.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
 }
 
 .unclicked_quote:hover {
@@ -165,6 +185,12 @@ p {
     background-image: url(posts/unclicked_types/links.png);
     background-color: whitesmoke;
     background-size: 50px 50px;
+}
+
+.locked_link {
+    background-image: url(posts/locked_types/links.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
 }
 
 .unclicked_link:hover {
@@ -187,6 +213,12 @@ p {
 
 }
 
+.locked_chat {
+    background-image: url(posts/locked_types/chats.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
 .unclicked_audio {
     background-image: url(posts/unclicked_types/audio.png);
     background-color: whitesmoke;
@@ -201,6 +233,11 @@ p {
 
 }
 
+.locked_audio {
+    background-image: url(posts/locked_types/audio.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
 .unclicked_video {
     background-image: url(posts/unclicked_types/videos.png);
     background-color: whitesmoke;
@@ -214,6 +251,12 @@ p {
 
 }
 
+.locked_video {
+    background-image: url(posts/locked_types/videos.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
+}
+
 .unclicked_ask {
     background-image: url(posts/unclicked_types/asks.png);
     background-color: whitesmoke;
@@ -225,4 +268,10 @@ p {
     background-color: whitesmoke;
     background-size: 50px 50px;
 
+}
+
+.locked_ask {
+    background-image: url(posts/locked_types/asks.png);
+    background-color: whitesmoke;
+    background-size: 120px 100px;
 }
