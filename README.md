@@ -14,8 +14,8 @@ To Do List
 
 	 Think of a better name\
 	 Change the logo?
-	 lighten the icons as opposed to making them darker - this is more recognisable for the audience (tumblr users)
-
+	smooth out the choices so they look better
+	
 Post Types:
 
 	Text
