@@ -1,36 +1,114 @@
 /*jslint browser: true*/
-/*global $, jQuery, alert*/
-var options;
-var first_options;
-var second_options;
-var current_options;
-var choices;
-var choice_counter;
-var picked_choices;
+var options = ["first_option", "second_option", "third_option", "fourth_option"];
+var first_options = ["text", "image", "quote", "link"];
+var second_options = ["chat", "audio", "video", "ask"];  
+var current_options = [second_options];
+var choices = ["first_choice", "second_choice", "third_choice"];
+var choice_counter = 0;
+var picked_choices = [];
 
-$(document).ready(new function() {
+var pickedVals = {
+    text: false,
+    image: false,
+    quote: false,
+    link: false,
+    chat: false,
+    audio: false,
+    video: false,
+    ask: false
+};
+
     
-    options = ["first_option", "second_option", "third_option", "fourth_option"];
-    first_options = ["text", "image", "quote", "link"];
-    second_options = ["chat", "audio", "video", "ask"];  
-    current_options = [second_options];
-    choices = ["first_choice", "second_choice", "third_choice"];
-    choice_counter = 0;
-    picked_choices = [];
-});
-
-
-
+    
+    
+    
 
 function save() {
-    status_bar = document.getElementById("status_text");
-    status_bar.innerHTML = "Saved";
+    
+    //fix this ugly way of looping through a dict
+    for(var i = 0; i < picked_choices.length; i++) {
+        var picked_choice_type = picked_choices[i].substring(14,picked_choices[i].length);
+        //make this more clear --> pickedVals[key] = key 
+        for(var key in pickedVals) {
+            if (key == picked_choice_type) {
+                pickedVals[key] = true; 
+            }
+        }
+    }
+    
 
-    setTimeout(function() {
+    chrome.storage.sync.set({
+        first_choice: picked_choices[0],
+        second_choice: picked_choices[1],
+        third_choice: picked_choices[2],
+        
+        text: pickedVals["text"],
+        image: pickedVals["image"],
+        quote: pickedVals["quote"],
+        link: pickedVals["link"],
+        chat: pickedVals["chat"],
+        audio: pickedVals["audio"],
+        video: pickedVals["video"],
+        ask: pickedVals["ask"]
+        
+    }, function() {
+        
+        var status_bar = document.getElementById("status_text");
+        status_bar.innerHTML = "Saved";
+        setTimeout(function() {
         status_bar.innerHTML = "";
         }, 750);
+        
+        var my_url = "https://www.tumblr.com/dashboard";
+        var tab_url = "";
+        chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+            tab_url = tabs[0].url;
+
+            if (my_url == tab_url) {
+
+                chrome.tabs.reload();
+            }
+        });    
+        
+    });
     
+
+      
+}
+
+function getOptions() {
+        chrome.storage.sync.get({
+
+            first_choice: false,
+            second_choice: false,
+            third_choice: false,
+            
+            text: false,
+            image: false,
+            quote: false,
+            link: false,
+            chat: false,
+            audio: false,
+            video: false,
+            ask: false
+    }, function(items){
+        if (items.first_choice) {
+            document.getElementById("first_choice").className = items.first_choice;
+        }
+
+        if (items.second_choice != false) {
+            document.getElementById("second_choice").className = items.second_choice;
+        }
+        
+        if(items.third_choice != false) {
+            document.getElementById("third_choice").className = items.third_choice;
+        }
+
+    });
     
+    //add some code to set the picked vals based on chrome.storage too
+
+
 }
 
 function optionClick(option) {
@@ -41,7 +119,7 @@ function optionClick(option) {
     var choice_class_name = ("choice locked" + clicked_option_class.substring(16, clicked_option_class.length));
     
     var contains = false;
-    for(i = 0; i < picked_choices.length; i++) {
+    for(var i = 0; i < picked_choices.length; i++) {
     
         if (picked_choices[i] === choice_class_name) {
             contains = true;
@@ -52,18 +130,16 @@ function optionClick(option) {
     if (!contains) {
         document.getElementById(choices[picked_choices_index]).className =  choice_class_name;
         picked_choices[picked_choices_index] = choice_class_name;
+        choice_counter++;
 
     }
 
-    choice_counter++;
   
 }
 
-
-
 function rightSwap(){
     
-    for(i = 0; i < options.length; i++) {
+    for(var i = 0; i < options.length; i++) {
         document.getElementById(options[i]).className = ("option unclicked_" + current_options[0][i]);
     }
     
@@ -101,5 +177,5 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#fourth_option").addEventListener("click", function() {
         optionClick("fourth_option");
     }, false);    
-    
+    getOptions()
 });
