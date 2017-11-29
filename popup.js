@@ -77,20 +77,19 @@ function save() {
 }
 
 function getOptions() {
-        chrome.storage.sync.get({
-
-            first_choice: false,
-            second_choice: false,
-            third_choice: false,
-            
-            text: false,
-            image: false,
-            quote: false,
-            link: false,
-            chat: false,
-            audio: false,
-            video: false,
-            ask: false
+    chrome.storage.sync.get({
+        first_choice: false,
+        second_choice: false,
+        third_choice: false,
+        
+        text: false,
+        image: false,
+        quote: false,
+        link: false,
+        chat: false,
+        audio: false,
+        video: false,
+        ask: false
     }, function(items){
         if (items.first_choice) {
             document.getElementById("first_choice").className = items.first_choice;
