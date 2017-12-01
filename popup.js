@@ -1,8 +1,16 @@
 /*jslint browser: true*/
+
+
+/* 
+
+add some multi line comments to all the methods/functions
+*/
+
 var options = ["first_option", "second_option", "third_option", "fourth_option"];
 var first_options = ["text", "image", "quote", "link"];
 var second_options = ["chat", "audio", "video", "ask"];  
-var current_options = [second_options];
+var current_options = [[second_options, first_options]];
+var options_counter = 0;
 var choices = ["first_choice", "second_choice", "third_choice"];
 var choice_counter = 0;
 var picked_choices = [];
@@ -25,16 +33,16 @@ var pickedVals = {
 
 function save() {
     
-    //fix this ugly way of looping through a dict
-    for(var i = 0; i < picked_choices.length; i++) {
-        var picked_choice_type = picked_choices[i].substring(14,picked_choices[i].length);
-        //make this more clear --> pickedVals[key] = key 
+    for(var i in picked_choices) {
+        var picked_choice_type = picked_choices[i].substring(14, picked_choices[i].length);
         for(var key in pickedVals) {
             if (key == picked_choice_type) {
-                pickedVals[key] = true; 
+                pickedVals[key] = true;
+                console.log("yas");
             }
         }
     }
+
     
 
     chrome.storage.sync.set({
@@ -95,22 +103,22 @@ function getOptions() {
             document.getElementById("first_choice").className = items.first_choice;
         }
 
-        if (items.second_choice != false) {
+        if (items.second_choice) {
             document.getElementById("second_choice").className = items.second_choice;
         }
         
-        if(items.third_choice != false) {
+        if(items.third_choice) {
             document.getElementById("third_choice").className = items.third_choice;
         }
 
     });
     
-    //add some code to set the picked vals based on chrome.storage too
 
 
 }
 
 function optionClick(option) {
+    //clear up how this works so images don't repeat
     clicked_option = document.getElementById(option);
     clicked_option_class = clicked_option.getAttribute("class");
     picked_choices_index = choice_counter % 3;
@@ -137,22 +145,24 @@ function optionClick(option) {
 }
 
 function rightSwap(){
-    
     for(var i = 0; i < options.length; i++) {
-        document.getElementById(options[i]).className = ("option unclicked_" + current_options[0][i]);
+        options_counter = Math.abs(options_counter);
+
+        document.getElementById(options[i]).className = ("option unclicked_" + current_options[0][options_counter % current_options[0].length][i]);
     }
-    
-    current_options = [first_options];
+    options_counter++;
+
 }
 
 
 function leftSwap() {
-    
-    for(i = 0; i < options.length; i++) {
-        document.getElementById(options[i]).className = ("option unclicked_" + current_options[0][i]);
+    options_counter = Math.abs(options_counter);
+    for(var i = 0; i < options.length; i++) {
+        document.getElementById(options[i]).className = ("option unclicked_" + current_options[0][options_counter % 2][i]);
+
     }
     
-    current_options = [second_options];
+    options_counter--;
 }
 
 
