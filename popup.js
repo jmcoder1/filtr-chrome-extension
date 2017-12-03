@@ -103,6 +103,7 @@ function getOptions() {
         
         picked_choices: []
 
+
     }, function(items){
         if (items.first_choice) {
             document.getElementById("first_choice").className = items.first_choice;
@@ -115,9 +116,7 @@ function getOptions() {
         if(items.third_choice) {
             document.getElementById("third_choice").className = items.third_choice;
         }
-        //this feels wrong and fugly
-        //too many global variables 
-        //send halp
+
         picked_choices = items.picked_choices;
     });
     
@@ -134,7 +133,7 @@ function optionClick(option) {
     var choice_class_name = ("choice locked" + clicked_option_class.substring(16, clicked_option_class.length));
     
     var contains = false;
-    for(var i = 0; i < picked_choices.length; i++) {
+    for(var i = 0; i < choices.length; i++) {
     
         if (picked_choices[i] === choice_class_name) {
             contains = true;
