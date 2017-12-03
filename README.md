@@ -7,13 +7,11 @@ Chrome Web Extension
 
 Name
 
-	Tumblr Type Filter
-
+	Filtr 
 
 To Do List
 
-	 Think of a better name\
-	 Change the logo?
+	Make a credits page
 
 Post Types:
 
