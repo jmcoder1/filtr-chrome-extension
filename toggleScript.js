@@ -11,7 +11,10 @@ chrome.storage.sync.get({
     chat: false,
     audio: false,
     video: false,
-    ask: false
+    ask: false,
+
+    picked_choices: picked_choices
+
 }, function(items){
 
 console.log(items.text);
@@ -20,7 +23,7 @@ MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 var observer = new MutationObserver(function(mutations, observer) {
     
    	// Text Post
-   	if(items.text == true){
+   	if(items.text){
     	$("[class*='post_full is_regular']").hide();
     }
     else{
@@ -28,7 +31,7 @@ var observer = new MutationObserver(function(mutations, observer) {
     }
 
     // Photo Posts
-    if(items.image == true){
+    if(items.image){
     	$("[class*='post_full is_photo']").hide();
     }
     else{
@@ -36,7 +39,7 @@ var observer = new MutationObserver(function(mutations, observer) {
     }
 
     // Quote Posts
-    if(items.quote == true){
+    if(items.quote){
     	$("[class*='post_full is_quote']").hide();
     }
     else{
@@ -44,7 +47,7 @@ var observer = new MutationObserver(function(mutations, observer) {
     }
 
     // Link Posts
-    if(items.link == true){
+    if(items.link){
     	$("[class*='post_full is_link']").hide();
     }
     else{
@@ -52,7 +55,7 @@ var observer = new MutationObserver(function(mutations, observer) {
     }
 
     // Chat Posts
-    if(items.chat == true){
+    if(items.chat){
     	$("[class*='post_full is_conversation']").hide();
     }
     else{
@@ -60,7 +63,7 @@ var observer = new MutationObserver(function(mutations, observer) {
     }
 
     // Audio Posts
-    if(items.audio == true){
+    if(items.audio){
     	$("[class*='post_full is_audio']").hide();
     }
     else{
@@ -69,7 +72,7 @@ var observer = new MutationObserver(function(mutations, observer) {
 
 
     // Video Posts
-    if(items.video == true){
+    if(items.video){
     	$("[class*='post_full is_video']").hide();
     }
     else{
@@ -77,7 +80,7 @@ var observer = new MutationObserver(function(mutations, observer) {
     }
 
     // Ask Posts
-    if(items.ask == true){
+    if(items.ask){
     	$("[class*='post_full is_note']").hide();
     }
     else{
