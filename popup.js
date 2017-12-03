@@ -14,6 +14,7 @@ var options_counter = 0;
 var choices = ["first_choice", "second_choice", "third_choice"];
 var choice_counter = 0;
 var picked_choices = [];
+var num_choices = 3;
 
 var pickedVals = {
     text: false,
@@ -38,7 +39,6 @@ function save() {
         for(var key in pickedVals) {
             if (key == picked_choice_type) {
                 pickedVals[key] = true;
-                console.log("yas");
             }
         }
     }
@@ -57,7 +57,9 @@ function save() {
         chat: pickedVals["chat"],
         audio: pickedVals["audio"],
         video: pickedVals["video"],
-        ask: pickedVals["ask"]
+        ask: pickedVals["ask"],
+        
+        picked_choices: picked_choices
         
     }, function() {
         
@@ -97,7 +99,10 @@ function getOptions() {
         chat: false,
         audio: false,
         video: false,
-        ask: false
+        ask: false,
+        
+        picked_choices: []
+
     }, function(items){
         if (items.first_choice) {
             document.getElementById("first_choice").className = items.first_choice;
@@ -110,7 +115,10 @@ function getOptions() {
         if(items.third_choice) {
             document.getElementById("third_choice").className = items.third_choice;
         }
-
+        //this feels wrong and fugly
+        //too many global variables 
+        //send halp
+        picked_choices = items.picked_choices;
     });
     
 
@@ -121,7 +129,7 @@ function optionClick(option) {
     //clear up how this works so images don't repeat
     clicked_option = document.getElementById(option);
     clicked_option_class = clicked_option.getAttribute("class");
-    picked_choices_index = choice_counter % 3;
+    picked_choices_index = choice_counter % num_choices;
     
     var choice_class_name = ("choice locked" + clicked_option_class.substring(16, clicked_option_class.length));
     
@@ -135,7 +143,7 @@ function optionClick(option) {
     }
     
     if (!contains) {
-        document.getElementById(choices[picked_choices_index]).className =  choice_class_name;
+        document.getElementById(choices[picked_choices_index]).className = choice_class_name;
         picked_choices[picked_choices_index] = choice_class_name;
         choice_counter++;
 
