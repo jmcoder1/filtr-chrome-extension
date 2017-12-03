@@ -13,11 +13,10 @@ chrome.storage.sync.get({
     video: false,
     ask: false,
 
-    picked_choices: picked_choices
+    picked_choices: []
 
 }, function(items){
 
-console.log(items.text);
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 var observer = new MutationObserver(function(mutations, observer) {
