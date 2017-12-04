@@ -29,15 +29,16 @@ Features
 * Don't just limit it to the dashboard?
 
 
-Premium users??
+Premium users:
 
+* Not limited to filtering to 3 post types
 * Can select specific blogs to have special permissions 
 
 e.g.
 
-* blog x doesn't have their posts filtered at all because I like them and I can rely on them not to post shit pics/videos
+- blog x doesn't have their posts filtered at all because I like them and I can rely on them not to post shit pics/videos
 
-* always filter blog x's videos because they suck or always filter their quotes because they are too edgy 
+- always filter blog x's videos because they suck or always filter their quotes because they are too edgy 
 
 * have a bin so users can see posts they have missed - ones that have been filtered 
 
