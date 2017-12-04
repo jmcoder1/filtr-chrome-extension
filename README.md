@@ -3,15 +3,10 @@
 NOTE: FOCUS on filtering for this web extension. 
 Do not add other types of fuctionality.
 
-Chrome Web Extension
 
-Name
-
-	Filtr 
 
 To Do List
 
-	Make a credits page
 	Add my website to the footer as a link
 
 Post Types:
