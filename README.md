@@ -12,6 +12,7 @@ Name
 To Do List
 
 	Make a credits page
+	Add my website to the footer as a link
 
 Post Types:
 
