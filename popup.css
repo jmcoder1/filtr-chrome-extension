@@ -137,7 +137,7 @@ p {
 }
 
 .locked_text {
-    background-image: url(posts/locked_types/text.png);
+    background-image: url(posts/hovered_types/text.png);
     background-color: whitesmoke;
     background-size: 120px 100px;
 }
@@ -157,7 +157,7 @@ p {
 }
 
 .locked_image {
-    background-image: url(posts/locked_types/images.png);
+    background-image: url(posts/hovered_types/images.png);
     background-color: whitesmoke;
     background-size: 120px 100px;
 }
@@ -169,7 +169,7 @@ p {
 }
 
 .locked_quote {
-    background-image: url(posts/locked_types/quotes.png);
+    background-image: url(posts/hovered_types/quotes.png);
     background-color: whitesmoke;
     background-size: 120px 100px;
 }
@@ -188,7 +188,7 @@ p {
 }
 
 .locked_link {
-    background-image: url(posts/locked_types/links.png);
+    background-image: url(posts/hovered_types/links.png);
     background-color: whitesmoke;
     background-size: 120px 100px;
 }
@@ -214,7 +214,7 @@ p {
 }
 
 .locked_chat {
-    background-image: url(posts/locked_types/chats.png);
+    background-image: url(posts/hovered_types/chats.png);
     background-color: whitesmoke;
     background-size: 120px 100px;
 }
@@ -234,7 +234,7 @@ p {
 }
 
 .locked_audio {
-    background-image: url(posts/locked_types/audio.png);
+    background-image: url(posts/hovered_types/audio.png);
     background-color: whitesmoke;
     background-size: 120px 100px;
 }
@@ -252,7 +252,7 @@ p {
 }
 
 .locked_video {
-    background-image: url(posts/locked_types/videos.png);
+    background-image: url(posts/hovered_types/videos.png);
     background-color: whitesmoke;
     background-size: 120px 100px;
 }
@@ -271,7 +271,7 @@ p {
 }
 
 .locked_ask {
-    background-image: url(posts/locked_types/asks.png);
+    background-image: url(posts/hovered_types/asks.png);
     background-color: whitesmoke;
     background-size: 120px 100px;
 }
