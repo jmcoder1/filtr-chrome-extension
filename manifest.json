@@ -1,12 +1,13 @@
 {
 	"manifest_version": 2,
 
-	"name": "Name Not Decided", 
+	"name": "Filtr", 
+    "short_name": "Filtr",
 	"description": "A simple way to filter your dashboard.",
 	"version": "1.0",
 
     "icons": {
-		"128": "icons/filter_icon_extension.png"
+		"128": "icons/main_icon.png"
 	},
 
     
@@ -25,8 +26,13 @@
 	}
 	],
     
-	"permissions":["storage", "tabs"]
+	"permissions":["storage", "tabs"],
+
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+
     
 }
+
+
 
 
