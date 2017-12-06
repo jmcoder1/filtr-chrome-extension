@@ -4,12 +4,21 @@ html {
     width: 470px;
 }
 
+a {
+    color: white;
+}
+
+a:hover, a:visited {
+    font-weight: bold;
+}
+
+
 p.header {
     width: 470px;
-    postion: fixed;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 40px;
+    font-size: 60px;
+    font-family: "Bookman Old Style", "Georgia", "Garamond";
     font-weight: bold;
 
 }
@@ -21,8 +30,8 @@ p.footer {
 
 p {
     text-align: center;
-    font-family: cursive, "Garamond";/*change to a nice font if possible*/
-    color: whitesmoke
+    font-family: "Bookman Old Style", "Georgia", "Garamond";
+    color: white;
 }
 
 .status {
@@ -93,7 +102,7 @@ p {
     float: right;
     margin-right: 20px;
     background-image: url(arrows/unclicked/right.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
     border: none;
     outline: 0;    
@@ -124,154 +133,202 @@ p {
 
 .unclicked_text {
     background-image: url(posts/unclicked_types/text.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .unclicked_text:hover {
     background-image: url(posts/hovered_types/text.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .locked_text {
     background-image: url(posts/hovered_types/text.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 120px 100px;
 }
 
 .unclicked_image {
     background-image: url(posts/unclicked_types/images.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .unclicked_image:hover {
     background-image: url(posts/hovered_types/images.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .locked_image {
     background-image: url(posts/hovered_types/images.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 120px 100px;
 }
 
 .unclicked_quote {
     background-image: url(posts/unclicked_types/quotes.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 }
 
 .locked_quote {
     background-image: url(posts/hovered_types/quotes.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 120px 100px;
 }
 
 .unclicked_quote:hover {
     background-image: url(posts/hovered_types/quotes.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .unclicked_link {
     background-image: url(posts/unclicked_types/links.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 }
 
 .locked_link {
     background-image: url(posts/hovered_types/links.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 120px 100px;
 }
 
 .unclicked_link:hover {
     background-image: url(posts/hovered_types/links.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 .unclicked_chat {
     background-image: url(posts/unclicked_types/chats.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .unclicked_chat:hover {
     background-image: url(posts/hovered_types/chats.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .locked_chat {
     background-image: url(posts/hovered_types/chats.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 120px 100px;
 }
 
 .unclicked_audio {
     background-image: url(posts/unclicked_types/audio.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .unclicked_audio:hover {
     background-image: url(posts/hovered_types/audio.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .locked_audio {
     background-image: url(posts/hovered_types/audio.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 120px 100px;
 }
 .unclicked_video {
     background-image: url(posts/unclicked_types/videos.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 }
 
 .unclicked_video:hover {
     background-image: url(posts/hovered_types/videos.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .locked_video {
     background-image: url(posts/hovered_types/videos.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 120px 100px;
 }
 
 .unclicked_ask {
     background-image: url(posts/unclicked_types/asks.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 }
 
 .unclicked_ask:hover {
     background-image: url(posts/hovered_types/asks.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 50px 50px;
 
 }
 
 .locked_ask {
     background-image: url(posts/hovered_types/asks.png);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: 120px 100px;
+}
+
+.unclicked_reset { 
+    background-image: url(third_options/unclicked/reset.png);
+    background-size: 50px 50px;
+    background-color: white;
+}
+
+.unclicked_reset:hover { 
+    background-image: url(third_options/clicked/reset.png);
+    background-size: 50px 50px;
+    background-color: white;
+}
+
+.unclicked_saved {
+    background-image: url(third_options/unclicked/saved.png);
+    background-size: 50px 50px;
+    background-color: white;    
+}
+
+.unclicked_saved:hover { 
+    background-image: url(third_options/clicked/saved.png);
+    background-size: 50px 50px;
+    background-color: white;  
+}
+
+.unclicked_blog_permissions {
+    background-image: url(third_options/unclicked/blog_permissions.png);
+    background-size: 50px 50px;
+    background-color: white;  
+}
+
+.unclicked_blog_permissions:hover {
+    background-image: url(third_options/clicked/blog_permissions.png);
+    background-size: 50px 50px;
+    background-color: white;  
+}
+
+.unclicked_outofblog {
+    background-image: url(third_options/unclicked/outofblog.png);
+    background-size: 50px 50px;
+    background-color: white;    
+}
+
+.unclicked_outofblog:hover {
+    background-image: url(third_options/clicked/outofblog.png);
+    background-size: 50px 50px;
+    background-color: white;    
 }
